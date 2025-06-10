@@ -2,86 +2,85 @@
 // 1. Welcome to Bridgelabz!
 import java.util.Scanner;
 
-public class assignment {
+public class MyProgram {
     public static void main(String[] args) {
-        // 1. Welcome to Bridgelabz!
-        System.out.println("Welcome to Bridgelabz!");
+        // Display a greeting message
+        System.out.println("Hello! Let's do some calculations.");
 
-        // 2. Add TwoNumbers
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter first number: ");
-        int num1 = scanner.nextInt();
-        System.out.print("Enter second number: ");
-        int num2 = scanner.nextInt();
-        int sum = num1 + num2;
-        System.out.println("Sum: " + sum);
+        Scanner input = new Scanner(System.in);
 
-        // 3. Celsius to Fahrenheit Conversion
-        System.out.print("Enter temperature in Celsius: ");
-        double celsius = scanner.nextDouble();
-        double fahrenheit = (celsius * 9 / 5) + 32;
-        System.out.println("Temperature in Fahrenheit: " + fahrenheit);
+        // Adding two integers
+        System.out.print("Input first integer: ");
+        int first = input.nextInt();
+        System.out.print("Input second integer: ");
+        int second = input.nextInt();
+        int total = first + second;
+        System.out.println("The sum is: " + total);
 
-        // 4. Area of a Circle
-        System.out.print("Enter radius of the circle: ");
-        double radius = scanner.nextDouble();
-        double area = Math.PI * Math.pow(radius, 2);
-        System.out.println("Area of the circle: " + area);
+        // Converting Celsius to Fahrenheit
+        System.out.print("Input temperature in Celsius: ");
+        double tempCelsius = input.nextDouble();
+        double tempFahrenheit = (tempCelsius * 9 / 5) + 32;
+        System.out.println("Converted to Fahrenheit: " + tempFahrenheit);
 
-        // 5. Volume of a Cylinder
-        System.out.print("Enter radius of the cylinder: ");
-        double cylinderRadius = scanner.nextDouble();
-        System.out.print("Enter height of the cylinder: ");
-        double height = scanner.nextDouble();
-        double volume = Math.PI * Math.pow(cylinderRadius, 2) * height;
-        System.out.println("Volume of the cylinder: " + volume);
+        // Area calculation of a circle
+        System.out.print("Input the radius of a circle: ");
+        double r = input.nextDouble();
+        double circleArea = Math.PI * r * r;
+        System.out.println("Circle area: " + circleArea);
 
-        scanner.close();
+        // Volume of a cylinder
+        System.out.print("Input cylinder radius: ");
+        double cylR = input.nextDouble();
+        System.out.print("Input cylinder height: ");
+        double cylH = input.nextDouble();
+        double cylVolume = Math.PI * cylR * cylR * cylH;
+        System.out.println("Cylinder volume: " + cylVolume);
 
-        // Self Problems
+        // --- Additional Calculations ---
 
-        // 1. Calculate Simple Interest
-        System.out.print("Enter Principal: ");
-        double principal = scanner.nextDouble();
-        System.out.print("Enter Rate: ");
-        double rate = scanner.nextDouble();
-        System.out.print("Enter Time: ");
-        double time = scanner.nextDouble();
-        double simpleInterest = (principal * rate * time) / 100;
-        System.out.println("Simple Interest: " + simpleInterest);
+        // Simple Interest Formula
+        System.out.print("Enter amount: ");
+        double amt = input.nextDouble();
+        System.out.print("Enter annual rate (%): ");
+        double interestRate = input.nextDouble();
+        System.out.print("Enter time (years): ");
+        double duration = input.nextDouble();
+        double interest = (amt * interestRate * duration) / 100;
+        System.out.println("Simple Interest is: " + interest);
 
-        // 2. Perimeter of a Rectangle
-        System.out.print("Enter length of the rectangle: ");
-        double length = scanner.nextDouble();
-        System.out.print("Enter width of the rectangle: ");
-        double width = scanner.nextDouble();
-        double perimeter = 2 * (length + width);
-        System.out.println("Perimeter of the rectangle: " + perimeter);
+        // Perimeter of rectangle
+        System.out.print("Enter rectangle length: ");
+        double len = input.nextDouble();
+        System.out.print("Enter rectangle width: ");
+        double wid = input.nextDouble();
+        double peri = 2 * (len + wid);
+        System.out.println("Perimeter: " + peri);
 
-        // 3. Power Calculation
-        System.out.print("Enter base: ");
-        double base = scanner.nextDouble();
-        System.out.print("Enter exponent: ");
-        double exponent = scanner.nextDouble();
-        double powerResult = Math.pow(base, exponent);
-        System.out.println("Result of " + base + " raised to " + exponent + ": " + powerResult);
+        // Power operation
+        System.out.print("Enter base value: ");
+        double baseVal = input.nextDouble();
+        System.out.print("Enter exponent value: ");
+        double exp = input.nextDouble();
+        double result = Math.pow(baseVal, exp);
+        System.out.println("Power result: " + result);
 
-        // 4. Calculate Average of Three Numbers
-        System.out.print("Enter first number: ");
-        double avgNum1 = scanner.nextDouble();
-        System.out.print("Enter second number: ");
-        double avgNum2 = scanner.nextDouble();
-        System.out.print("Enter third number: ");
-        double avgNum3 = scanner.nextDouble();
-        double average = (avgNum1 + avgNum2 + avgNum3) / 3;
-        System.out.println("Average of the three numbers: " + average);
+        // Average of three values
+        System.out.print("Input 1st number: ");
+        double x = input.nextDouble();
+        System.out.print("Input 2nd number: ");
+        double y = input.nextDouble();
+        System.out.print("Input 3rd number: ");
+        double z = input.nextDouble();
+        double avg = (x + y + z) / 3;
+        System.out.println("Average value: " + avg);
 
-        // 5. Convert Kilometers to Miles
-        System.out.print("Enter distance in kilometers: ");
-        double kilometers = scanner.nextDouble();
-        double miles = kilometers * 0.621371;
-        System.out.println("Distance in miles: " + miles);
+        // Kilometers to miles conversion
+        System.out.print("Enter distance in KM: ");
+        double km = input.nextDouble();
+        double mi = km * 0.621371;
+        System.out.println("Equivalent in miles: " + mi);
 
-        scanner.close();
+        input.close();
     }
 }
