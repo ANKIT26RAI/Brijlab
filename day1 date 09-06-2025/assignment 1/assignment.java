@@ -2,7 +2,7 @@
 // 1. Welcome to Bridgelabz!
 import java.util.Scanner;
 
-public class assignment1 {
+public class assignment {
     public static void main(String[] args) {
         // Display a greeting message
         System.out.println("Hello! Let's do some calculations.");
